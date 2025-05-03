@@ -1,0 +1,16 @@
+{% extends "adminpanel/base.html" %}
+
+{% block title %}Product List{% endblock %}
+
+{% block content %}
+
+<h1>Add New Product</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+<a href="{% url 'product_list' %}" class="btn btn-link mt-3">Back to Product List</a>
+
+
+{% endblock %}
